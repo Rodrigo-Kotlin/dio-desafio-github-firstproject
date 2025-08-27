@@ -1,0 +1,54 @@
+Configuração inicial
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@email.com"
+git config --list   # Ver configurações
+
+📌 Iniciar e clonar repositórios
+git init                   # Inicia um repositório local
+git clone URL_DO_REPO      # Clona um repositório do GitHub
+
+📌 Status e histórico
+git status     # Mostra arquivos modificados, staged, etc.
+git log        # Histórico de commits
+git log --oneline --graph --decorate --all   # Histórico resumido
+
+📌 Trabalhando com arquivos
+git add arquivo.txt        # Adiciona arquivo específico
+git add .                  # Adiciona todas as mudanças
+git commit -m "Mensagem"   # Cria commit com mensagem
+git commit -am "Mensagem"  # Add + commit (para arquivos já rastreados)
+
+📌 Branches
+git branch                 # Lista branches
+git branch nome-branch     # Cria nova branch
+git checkout nome-branch   # Troca de branch
+git checkout -b nova-branch # Cria e já muda para ela
+git merge nome-branch      # Faz merge de outra branch na atual
+git branch -d nome-branch  # Deleta branch
+
+📌 Atualizar do remoto
+git fetch                  # Baixa alterações do remoto (não aplica)
+git pull                   # Baixa e aplica alterações (fetch + merge)
+
+📌 Enviar para o GitHub
+git remote -v              # Ver repositórios remotos
+git remote add origin URL  # Conectar ao GitHub
+git push -u origin main    # Envia branch main para GitHub
+git push                   # Envia alterações
+
+📌 Desfazer alterações
+git restore arquivo.txt         # Desfaz mudanças não adicionadas
+git reset arquivo.txt           # Remove do stage (git add)
+git reset --hard HEAD           # Volta ao último commit
+git revert ID_COMMIT            # Cria commit que desfaz outro
+
+📌 Tags (versões)
+git tag v1.0                     # Cria tag
+git tag                          # Lista tags
+git push origin v1.0             # Envia tag para GitHub
+
+📌 Comandos úteis
+git diff             # Mostra diferenças não commitadas
+git stash            # Guarda mudanças temporárias
+git stash pop        # Recupera mudanças guardadas
+git clean -fd        # Remove arquivos não rastreados
